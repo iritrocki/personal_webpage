@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact me!</title>
+    <link rel="icon" href="../photos/Personal-logo.png" type="image/icon type">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="../functionality.js" defer></script>
+    <script src="../contact-form.js" defer></script>
+</head>
+
+<body class="font-sans lg:relative  pb-16">
+    <header id="idHeader">
+        <!--HERE THE SCRIPT ADDS THE SAME NAV BAR FOR ALL PAGES-->
+    </header>
+    <div class="flex justify-center bg-gray-200 py-10 font-sans font-thin pb-24">
+        <!--Form-->
+        <form action="mailto:iritrocki@gmail.com" id="idForm" method="post" enctype="text/plain"
+            class="flex-col space-y-5 w-2/3 bg-gray-100 p-10 rounded border-2 border-gray-300">
+            <div class="text-center text-3xl">CONTACT ME!</div>
+            <!--Name input-->
+            <div class="flex justify-between space-x-6">
+                <label for="idName">Name:</label>
+                <div class="font-light flex-grow h-10">
+                    <input class="focus:outline-none border-2 rounded border-gray-200 w-full" type="text" id="idName"
+                        name="Name " maxlength="20" required>
+                    <span id="error-name" class="text-red-500 font-thin"></span>
+                </div>
+            </div>
+
+            <!--Lastname input-->
+            <div class="flex justify-between space-x-6">
+                <label for="idLastname">Last name:</label>
+                <div class="font-light flex-grow h-10">
+                    <input class="focus:outline-none border-2 rounded border-gray-200 w-full" type="text"
+                        id="idLastname" name="Last name " maxlength="20" required>
+                    <span id="error-lastname" class="text-red-500 font-thin"></span>
+                </div>
+            </div>
+
+            <!--Email input-->
+            <div class="flex justify-between space-x-6">
+                <label for="idEmail">Email:</label>
+                <div class="font-light flex-grow h-10">
+                    <input class="font-light flex-grow focus:outline-none border-2 rounded border-gray-200 w-full"
+                        type="email" id="idEmail" name="Email " required>
+                    <span id="error-email" class="text-red-500 font-thin"></span>
+                </div>
+            </div>
+
+            <div>
+                <textarea rows="4" name="Message " id="idMessage"
+                    class="font-light p-4 w-full focus:outline-none border-2 rounded border-gray-200">Leave me a message!</textarea>
+            </div>
+            <div>
+                <div>Would you like to suscribe to my weekly newsletter? </div>
+                <div class="flex">
+                    <input class="mr-4" type="radio" id="radioYes" name="newsletter" checked>
+                    <span class="mr-8">Yes</span>
+                    <input class="mr-4" type="radio" id="radioNo" name="newsletter">
+                    <span class="mr-8">No</span>
+                </div>
+            </div>
+            <!--Submit button-->
+            <div class="flex justify-center">
+                <input type="button" id="idSubmitButton" value="Submit"
+                    class="p-2 rounded hover:bg-white border-2 hover:border-gray-500 font-sans font-light" />
+            </div>
+        </form>
+
+    </div>
+    <footer id="idFooter">
+        <!--HERE THE SCRIPT ADDS THE SAME FOOTER FOR ALL PAGES-->
+    </footer>
+</body>
+
+</html>

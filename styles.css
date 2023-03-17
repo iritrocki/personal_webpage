@@ -1,0 +1,199 @@
+/* STYLES FOR DECORATING PHOTOS AS POLAROID - ABOUT ME PAGE */
+.section,
+.hobbieSection {
+    display: flex;
+    padding: 3rem;
+    background-color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.polaroid-pic {
+    display: flex;
+    align-items: center;
+}
+
+.polaroid {
+    background-color: #fff;
+    padding: 1rem 1rem 4rem 1rem;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .polaroid {
+        padding: 1rem 1rem 3rem 1rem;
+    }
+}
+
+.p1 {
+    width: 45%;
+    transform: rotate(10deg);
+}
+
+.p2 {
+    width: 45%;
+    transform: rotate(-10deg);
+}
+
+.p3 {
+    width: 30%;
+    transform: rotate(-5deg);
+}
+
+.polaroid img {
+    width: 100%;
+}
+
+
+/* STYLES FOR TIMELINE - EDUCATION AND EMPLOYMENT PAGES */
+#timeline {
+    margin: 0 auto;
+    max-width: 650px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 3px 1fr;
+}
+
+#item {
+    margin: 0 20px 20px 20px;
+    font-weight: 200;
+
+}
+
+#line {
+    position: relative;
+    background-color: #D1D5DB;
+}
+
+#point {
+    position: absolute;
+    background-color: #D1D5DB;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.info {
+    padding: 1rem;
+    margin-top: 5px;
+    background: #D1D5DB;
+    border-radius: 5px;
+}
+
+
+/* Hobbies styles */
+#hobbies-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    justify-content: space-between;
+    height: min-content;
+}
+
+#hobbies-menu img {
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    object-position: 70% 30%;
+    z-index: 10;
+
+}
+
+#hobbies-menu>div {
+    position: relative;
+}
+
+#layer {
+    position: absolute;
+    z-index: 20;
+    inset: 0px;
+    background-color: black;
+    opacity: 50%;
+    text-align: center;
+}
+
+#hobbies-menu #text {
+    z-index: 30;
+    position: absolute;
+    height: min-content;
+    font-weight: thin;
+    text-transform: uppercase;
+    font-size: xx-large;
+    text-align: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 2px 2px black;
+}
+
+
+
+#btnSkating:hover #layer,
+#btnSkating:hover #text,
+#btnPainting:hover #layer,
+#btnPainting:hover #text,
+#btnWorkout:hover #layer,
+#btnWorkout:hover #text {
+    display: none
+}
+
+.sectionHeader {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: xx-large;
+    text-align: center;
+    background: #D1D5DB;
+    border-radius: 4px;
+    text-shadow: 2px 2px #fff;
+}
+
+#skatingSection,
+#paintingSection,
+#workoutSection {
+    padding: 20px;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+#paintingSection img,
+#workoutSection img {
+    width: 25%;
+    padding-left: 10px;
+}
+
+@media (max-width: 1024px) {
+    #hobbies-menu #text {
+        font-size: large;
+    }
+
+    .hobbieSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+
+    }
+
+    #paintingSection img,
+    #workoutSection img {
+        width: 50%;
+        padding-left: 0px;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #paintingSection img,
+    #workoutSection img {
+        width: 100%;
+        padding-left: 0px;
+        padding-top: 10px;
+    }
+}
